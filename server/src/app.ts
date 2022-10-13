@@ -1,6 +1,8 @@
+import config from 'config'
+
 import createServer from './utils/server'
 
-const port = 3010
+const port = config.get<Number>('port')
 
 const app = createServer()
 
